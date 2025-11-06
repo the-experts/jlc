@@ -5,21 +5,28 @@
 
     <groupId>nl.the-experts.cli</groupId>
     <artifactId>jlc</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}${changelist}</version>
     <packaging>jar</packaging>
 
     <name>Jira Lightweight Client (jcl)</name>
 
     <properties>
+        <!-- CI-friendly versioning -->
+        <revision>1.0</revision>
+        <changelist>-SNAPSHOT</changelist>
+
+        <!-- Build properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>2.2.21</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
         <mainClass>nl.theexperts.cli.jlc.JiraCommandRunner</mainClass>
 
+        <!-- Plugin version -->
         <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
         <maven-shade-plugin.version>3.6.1</maven-shade-plugin.version>
         <native-maven-plugin.version>0.11.2</native-maven-plugin.version>
 
+        <!-- Dependency versions -->
         <pico-cli.version>4.7.7</pico-cli.version>
         <dagger.version>2.57.2</dagger.version>
         <okhttp.version>5.3.0</okhttp.version>
